@@ -18,7 +18,7 @@ export default function LocationMarker() {
       position && (
         <Popup position={position}>
           Weather predict for this location?
-          <button onClick={()=>navigate("/weather")} className='border-2 hover:bg-green-400 cursor-pointer'>✓</button>  
+          <button onClick={()=>navigate("/weather",{state:position})} className='border-2 hover:bg-green-400 cursor-pointer'>✓</button>  
         </Popup>
       )
     }
