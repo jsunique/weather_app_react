@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import {  useLocation } from 'react-router'
+import background_night from './assets/background-night.png'
+import background_day from './assets/background-day.png'
 
 export default function Weather() {
   const location = useLocation();
