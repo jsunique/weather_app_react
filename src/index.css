@@ -1,9 +1,9 @@
 @import "tailwindcss";
 @font-face {
-  font-family: bozorg;
-  src: url('./assets/fonts/CaacupeOne-Regular.woff2');
+  font-family: kam;
+  src: url('assets/fonts/Josefin_Sans/JosefinSans-Medium.ttf');
 }
 @font-face {
-  font-family: kam;
-  src: url('./assets/fonts/JosefinSans-Regular.ttf');
+  font-family: bozorg;
+  src: url('assets/fonts/Bungee/Bungee-Regular.ttf');
 }

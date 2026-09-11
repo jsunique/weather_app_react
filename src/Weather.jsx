@@ -51,9 +51,10 @@ export default function Weather() {
 
   return (
     <>
-    <div className='w-full h-screen bg-center bg-cover bg-no-repeat bg-[url("./assets/fullpage-bg.png")]
+    <div className='w-full  h-screen bg-center bg-cover bg-no-repeat bg-[url("./assets/fullpage-bg.png")]
     '>
-      <div style={{backgroundImage:`url('${update.isNight ?  background_night : background_day}')`}} className='bg-center bg-cover rounded-3xl w-[85%] h-screen mx-auto my-0'>
+      <div style={{backgroundImage:`url('${update.isNight ?  background_night : background_day}')`}} className='bg-center bg-cover rounded-3xl w-[85%] h-screen mx-auto flex flex-col'>
+        <p className='text text-5xl text-center font-[bozorg]  text-[#eaeaea] pt-10'>{update.city}</p>
       </div>
     </div>
     </>
