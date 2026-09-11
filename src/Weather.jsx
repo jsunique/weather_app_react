@@ -51,7 +51,11 @@ export default function Weather() {
 
   return (
     <>
-    <p className='h-15 w-50 bg-green-600'></p>
+    <div className='w-full h-screen bg-center bg-cover bg-no-repeat bg-[url("./assets/fullpage-bg.png")]
+    '>
+      <div style={{backgroundImage:`url('${update.isNight ?  background_night : background_day}')`}} className='bg-center bg-cover rounded-3xl w-[85%] h-screen mx-auto my-0'>
+      </div>
+    </div>
     </>
   )
 }
