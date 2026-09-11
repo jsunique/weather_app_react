@@ -51,10 +51,33 @@ export default function Weather() {
 
   return (
     <>
-    <div className='w-full  h-screen bg-center bg-cover bg-no-repeat bg-[url("./assets/fullpage-bg.png")]
+    <div className='flex items-center w-full  h-screen bg-center bg-cover bg-no-repeat bg-[url("./assets/fullpage-bg.png")]
     '>
-      <div style={{backgroundImage:`url('${update.isNight ?  background_night : background_day}')`}} className='bg-center bg-cover rounded-3xl w-[85%] h-screen mx-auto flex flex-col'>
-        <p className='text text-5xl text-center font-[bozorg]  text-[#eaeaea] pt-10'>{update.city}</p>
+      <div style={{backgroundImage:`url('${update.isNight ?  background_night : background_day}')`}} className='bg-center bg-cover rounded-3xl w-[85%] sm:w-[60%] h-[90%] mx-auto  flex flex-col items-center'>
+        <p className='text-4xl font-[bozorg] pt-10 text-white'>{update.city}</p>
+        <div className='flex justify-center w-full'>
+          <img className='w-40 h-45 sm:w-50 sm:h-60' src={update.icon} />
+        </div>
+
+        <div className='flex flex-col sm:flex-row md:justify-evenly gap-10 justify-between w-full px-5 items-center'>
+
+          <div className='flex items-center gap-4'>
+            <p className='text-white font-[kam] text-[18px]'>{update.temp}</p>
+            <div className='flex flex-col'>
+              <p className='text-white font-[kam] text-[18px]'>°C | °F </p>
+              <p className='text-white font-[kam] text-[18px]'>{update.descripton}</p>
+            </div>
+          </div>
+
+
+          <div className='flex flex-col'>
+            <p className='text-white font-[kam] text-[18px]'>Feels like: {update.feelsLike}°C</p>
+            <p className='text-white font-[kam] text-[18px]'>Humidity: {update.humidity}%</p>
+            <p className='text-white font-[kam] text-[18px]'>Wind: {update.wind}</p>
+          </div>
+        </div>
+     
+     
       </div>
     </div>
     </>
